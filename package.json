@@ -1,0 +1,29 @@
+{
+  "name": "habit-tracker",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "async": "^1.5.2",
+    "bcrypt-nodejs": "latest",
+    "body-parser": "^1.15.1",
+    "connect-flash": "latest",
+    "cookie-parser": "^1.4.1",
+    "ejs": "^2.5.7",
+    "express": "^4.13.4",
+    "express-session": "~1.14.1",
+    "method-override": "~2.3.6",
+    "mongodb": "^3.0.1",
+    "mongoose": "~4.13.1",
+    "morgan": "^1.7.0",
+    "passport": "~0.3.2",
+    "passport-local": "~1.0.0",
+    "pg": "^4.5.7"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": "6.1.0"
+  }
+}

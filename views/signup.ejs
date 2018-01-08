@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign up page</title>
+    <!-- bootstrap stylesheet -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="main.css">
+        <!-- font awesome -->
+        <!-- http://fontawesome.io/icons/ (link for icons) -->
+        <script src="https://use.fontawesome.com/ddcab6317d.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to our Habit Tracker!</h1>
+        <p>Good study habits help you make the grade.</p>
+    </div>
+    <div class="container">
+        <h2>To Sign Up</h2>
+            <p>Please submit your email and create a password.</p>
+            
+            <!-- REGISTRATION FORM -->
+            <form name ='f' action="/signup" method = "post">
+                <div class="form-group">
+                    <label for="usr_email_new">Email:</label>
+                    <input type="text" class="form-control" name = "email">
+                </div>
+                <div class="form-group">
+                    <label for="pwd_new">Password:</label>
+                    <input type="password" class="form-control" name = "password" id="pwd_new">
+                </div>
+                <input type="submit" id="regSubmit" value="Sign Up"></input>
+            </form>
+            
+            <!-- show any messages that come back with authentication -->
+            <% if (message.length > 0) { %>
+                <div class="alert"><%= message %></div>
+            <% } %>
+            
+            <!-- return to login page  -->
+            <br>
+            <p>Already have an account?</p>
+            <form class= "index" action='/' method=get>
+            <button>Log on</button>
+            </form>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Habit Tracker</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  
+  <div class='wrapper'>
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-10">
+        <h1>Track Your Habits</h1>
+        <p>Healthy Habits Lead to Good Grades!</p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- display array of habits -->
+  <div class='container'> 
+  <% if (habits.length > 0) { %>
+    <p>Your habits:</p>
+    <ul>
+      <% for(var habit in habits){ %>
+        <li>
+          <%= habits[habit].text %>
+        </li>
+      <% } %>
+    </ul>
+  <% } %>
+  </div>
+  
+  <!-- Add New Habit --> 
+  <div class="container">
+    <form action="addHabit" method="post">
+      <div class="form-habit">
+        <label for="newHabit">Enter new habit:</label>
+        <br>
+        <input type="text"  name="habit">
+        <input type="submit" id='habitSubmit' value="Add to tracker"></input>
+     </div>
+    </form>
+  </div>
+  
+  <div style="height:10px;"></div>
+  
+  <!-- Delete Habit --> 
+  <div class="container">
+    <form action="/deleteHabit" method="post">
+      <div class="form-habit">
+        <label for="newHabit">Delete a habit:</label>
+        <br>
+        <input type="text"  name="habit">
+        <input type="submit" id='habitDelete' value="Delete from tracker"></input>
+     </div>
+    </form>
+  </div>
+  
+  <div style="height:10px;"></div>
+
+  <!-- See suggestions -->
+  <div class='container'>
+    <form action='/suggestions' method='get'>
+      <input type="submit" id='suggestHabits' value="Suggestions page"></input>
+    </form>
+  </div>
+  
+  <div style="height:10px;"></div>
+  
+  <!-- Log out -->
+  <div class='container'>
+      <div class="col-sm-2">
+        <form action = "/logout" method = "get">
+          <input type="submit" value="Log out">
+        </form>
+      </div>
+  </div>
+  
+</div> <!-- Wrapper -->
+
+</body>
+</html>
