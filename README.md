@@ -8,3 +8,5 @@ Future To-Do's
     Add a timer function for the habits.
     Add the ability to log in with facebook and google.
     
+Note: Run npm install before launching to install node modules
+    
