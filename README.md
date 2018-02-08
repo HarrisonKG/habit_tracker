@@ -11,6 +11,7 @@ Contributors:
     Andrew Freitas  
     
 Future To-Do's:  
+    Make the login page secure  
     Add a timer function for the habits.  
     Add the ability to log in with facebook and google.  
    
